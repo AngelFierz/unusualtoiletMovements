@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-	public float shakeMagnitude = 0.7f; // Magnitud del temblor
-	public float shakeDuration = 0.5f; // Duración del temblor
-	public float timeUntilShake = 10.0f; // Tiempo hasta que comience el temblor
+	public float shakeMagnitude = 0.7f; // This shit is broken, i dont know why tho, You will get it when you use it on your camera at Unity
+	public float shakeDuration = 0.5f; 
+	public float timeUntilShake = 10.0f; 
 
-	private Vector3 originalPosition; // Posición original de la cámara
-	private bool isShaking = false; // Indicador de si la cámara está temblando
-	private float shakeTimer = 0.0f; // Temporizador para el temblor
-	private float timer = 0.0f; // Temporizador para iniciar el temblor
+	private Vector3 originalPosition; 
+	private bool isShaking = false; 
+	private float shakeTimer = 0.0f; 
+	private float timer = 0.0f; 
 
 	void Start()
 	{
-		originalPosition = transform.localPosition; // Almacenar la posición original de la cámara
+		originalPosition = transform.localPosition; // Almacena la posicion local
 	}
 
 	void Update()
@@ -51,7 +51,7 @@ public class CameraShake : MonoBehaviour
 		}
 		else
 		{
-			transform.localPosition = originalPosition; // Restaurar la posición original de la cámara
+			transform.localPosition = originalPosition; // Restaurar la posición original de la cámara, lo cual no funciona como tenia en mente.
 			isShaking = false;
 		}
 	}
